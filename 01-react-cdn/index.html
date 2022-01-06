@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>React CDN</title>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const Interpolar = () => {
+            const [numero, setNumero] = React.useState(0);
+
+            setInterval(() => {
+                setNumero(numero + 1);
+            }, 3000);                       
+            return ( <div> <h1>Tu nombre es {numero}</h1> <hr/> </div> )
+        };
+
+        ReactDOM.render( 
+            <Interpolar/>,
+            document.getElementById("root") 
+        );
+    </script>
+</body>
+</html>
