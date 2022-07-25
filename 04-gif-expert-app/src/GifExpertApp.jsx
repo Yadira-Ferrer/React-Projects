@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { AddCategory } from './components/AddCategory';
+import { GifGrid } from './components/GifGrid';
 
 export const GifExpertApp = () => {
   const [categories, setCategories] = useState([
@@ -7,8 +8,11 @@ export const GifExpertApp = () => {
     'Jimmy Neutron',
   ]);
 
-  const onAddCategory = () => {
-    setCategories(['Los chicos del barrio', ...categories]);
+  const onAddCategory = (newCategory) => {
+    /* Validar que no existan repetidos */
+    if (categories.includes(newCategory)) return;
+    /* Añadir categoría */
+    setCategories([newCategory, ...categories]);
   };
 
   return (
@@ -16,13 +20,13 @@ export const GifExpertApp = () => {
       {/* Titulo */}
       <h1>GifExpertApp</h1>
       {/* Input - Buscar */}
-      <AddCategory setCategories={setCategories} />
+      <AddCategory onNewCategory={onAddCategory} />
       {/* Lista de GifItems */}
-      <ol>
-        {categories.map((category) => {
-          return <li key={category}>{category}</li>;
-        })}
-      </ol>
+      {categories.map((category) => (
+        <GifGrid key={category} category={category} />
+      ))}
     </>
   );
 };
+
+//TODO: Validar que no se inserten los mismos elementos No-CaseSensitive
