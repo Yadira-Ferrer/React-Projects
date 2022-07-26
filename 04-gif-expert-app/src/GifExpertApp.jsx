@@ -14,7 +14,7 @@ export const GifExpertApp = () => {
   return (
     <>
       {/* Titulo */}
-      <h1>GifExpertApp</h1>
+      <h1>Gif Expert App</h1>
       {/* Input - Buscar */}
       <AddCategory onNewCategory={onAddCategory} />
       {/* Lista de GifItems */}
