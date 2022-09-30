@@ -1,4 +1,6 @@
 import { useReducer } from 'react';
+import { TodoAdd } from './TodoAdd';
+import { TodoList } from './TodoList';
 import { todoReducer } from './todoReducer';
 
 const initialState = [
@@ -9,13 +11,17 @@ const initialState = [
   },
   {
     id: new Date().getTime * 2,
-    description: 'Aprender SOLID',
+    description: 'Aprender GraphQL',
     done: false,
   },
 ];
 
 export const TodoApp = () => {
   const [todos, dispatchTodo] = useReducer(todoReducer, initialState);
+
+  const handleNewToDo = (todo) => {
+    console.log({ todo });
+  };
 
   return (
     <>
@@ -25,31 +31,17 @@ export const TodoApp = () => {
       <hr />
       <div className="row">
         <div className="col-7">
-          <ul className="list-group">
-            {todos.map((todo) => (
-              <li
-                key={todo.id}
-                className="list-group-item d-flex justify-content-between"
-              >
-                <span className="align-self-center">Item1</span>
-                <button className="btn btn-danger">Borrar</button>
-              </li>
-            ))}
-          </ul>
+          {/* TODOLIST */}
+          <TodoList todos={todos} />
+          {/* END TODOLIST */}
         </div>
         <div className="col-5">
           <h4>Nuevo TODO</h4>
           <hr />
-          <form>
-            <input
-              type="text"
-              placeholder="¿Qué hay que hacer?"
-              className="form-control"
-            />
-            <button type="submit" className="btn btn-outline-info mt-2">
-              Agregar
-            </button>
-          </form>
+          {/* TODO ADD (onNewToDo) */}
+          {/* { id: new Date(), description: '', done: false} */}
+          <TodoAdd onNewTodo={handleNewToDo} />
+          {/* END TODO ADD */}
         </div>
       </div>
     </>
