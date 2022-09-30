@@ -4,13 +4,7 @@ import { TodoAdd } from './TodoAdd';
 import { TodoList } from './TodoList';
 import { todoReducer } from './todoReducer';
 
-const initialState = [
-  /* {
-    id: new Date().getTime,
-    description: 'Aprender SOLID',
-    done: false,
-  }, */
-];
+const initialState = [];
 
 const init = () => {
   return JSON.parse(localStorage.getItem('todos')) || [];
@@ -39,6 +33,13 @@ export const TodoApp = () => {
     });
   };
 
+  const handleToggleToDo = (id) => {
+    dispatch({
+      type: '[TODO] Toggle Item',
+      payload: id,
+    });
+  };
+
   return (
     <>
       <h1>
@@ -47,7 +48,11 @@ export const TodoApp = () => {
       <hr />
       <div className="row">
         <div className="col-7">
-          <TodoList todos={todos} onDeleteTodo={handleRemoveToDo} />
+          <TodoList
+            todos={todos}
+            onDeleteTodo={handleRemoveToDo}
+            onToggleTodo={handleToggleToDo}
+          />
         </div>
         <div className="col-5">
           <h4>Nuevo TODO</h4>
