@@ -1,7 +1,7 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 }
 
 html {
@@ -9,8 +9,9 @@ html {
 }
 
 body {
-  background: #eee;
+  margin: 0;
   padding: 0 16px;
+  background: #eee;
 }
 
 header {
@@ -38,14 +39,27 @@ footer p {
   color: #ccc;
 }
 
+.note-container {
+  margin: 0;
+  padding: 0;
+  width: 80vw;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 240px);
+  grid-auto-rows: 10px;
+  justify-content: center;
+}
+
 .note {
   background: #fff;
   border-radius: 7px;
   box-shadow: 0 2px 5px #ccc;
   padding: 10px;
-  width: 240px;
-  margin: 16px;
-  float: left;
+  /* width: 240px; */
+  margin: 15px 10px;
 }
 
 .note h1 {
@@ -59,3 +73,17 @@ footer p {
   white-space: pre-wrap;
   word-wrap: break-word;
 }
+
+.note_small {
+  grid-row-end: span 22;
+}
+
+.note_medium {
+  grid-row-end: span 32;
+}
+
+.note_large {
+  grid-row-end: span 45;
+}
+
+/* TODO: aplicar grow-row-end de forma dinamica... */
