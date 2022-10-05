@@ -5,7 +5,7 @@
 }
 
 html {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 body {
@@ -22,7 +22,7 @@ header {
 
 header h1 {
   color: #fff;
-  font-family: 'McLaren', cursive;
+  font-family: 'Raleway', cursive;
   font-weight: 200;
 }
 
@@ -50,7 +50,7 @@ footer p {
 
 .note h1 {
   font-size: 1.1em;
-  margin-bottom: 6px;
+  margin-bottom: 15px;
 }
 
 .note p {
