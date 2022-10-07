@@ -17,7 +17,7 @@ export const Quote = ({ quote, author, series }) => {
             <p ref={pRef}>{quote}</p>
           </blockquote>
           <figcaption className="blockquote-footer">
-            {author} in <cite title="Source Title">{series}</cite>
+            {author} {/* in <cite title="Source Title">{series}</cite> */}
           </figcaption>
         </figure>
         <code>{JSON.stringify(boxSize)}</code>
