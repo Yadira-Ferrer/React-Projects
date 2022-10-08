@@ -3,7 +3,7 @@ const notes = [
     key: 1,
     title: 'Delegation',
     content:
-      'Q. How many programmers does it take to change a light bulb? A. None – It’s a hardware problem',
+      "Q. How many programmers does it take to change a light bulb? A. None - It's a hardware problem",
     size: 'small',
   },
   {
@@ -17,7 +17,7 @@ const notes = [
     key: 5,
     title: 'AWS',
     content:
-      "Is the world's most comprehensive and broadly adopted cloud platform, offering over 200 fully featured services from data centers globally. Is an online platform that provides scalable and cost effective cloud computing solutions. AWS is a broadly adopted cloud platform that offers several on-demand operations like compute power, database storage, content delivery, etc., to help corporates scale and grow ",
+      "Is the world's most comprehensive and broadly adopted cloud platform, offering over 200 fully featured services from data centers globally. Is an online platform that provides scalable and cost effective cloud computing solutions. AWS is a broadly adopted cloud platform that offers several on-demand operations like compute power, database storage, content delivery, etc., to help corporates scale and grow.",
     size: 'large',
   },
   {

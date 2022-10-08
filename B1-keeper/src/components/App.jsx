@@ -1,23 +1,19 @@
+import { useNotes } from '../hooks/useNotes';
 import { Footer } from './Footer';
 import { Header } from './Header';
-import { Note } from './Note';
 
-import notes from '../notes';
+/* import notes from '../notes'; */
+import { CreateArea } from './CreateArea';
+import { NoteList } from './NoteList';
 
 function App() {
+  const { notes, handleNewNote, handleDeleteNote } = useNotes();
+
   return (
     <div>
       <Header />
-      <div className="note-container">
-        {notes.map((note) => (
-          <Note
-            key={note.key}
-            title={note.title}
-            content={note.content}
-            notesize={note.size}
-          />
-        ))}
-      </div>
+      <CreateArea onNewNote={handleNewNote} />
+      <NoteList notes={notes} onDeleteNote={handleDeleteNote} />
       <Footer />
     </div>
   );
