@@ -1,0 +1,16 @@
+.login-card {
+  display: flex;
+  height: 300px;
+  width: 300px;
+  border-radius: 10px;
+  padding: 15px 10px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #efefef;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+  /* Flexbox */
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
