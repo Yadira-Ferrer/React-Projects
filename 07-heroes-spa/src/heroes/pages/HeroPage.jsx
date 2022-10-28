@@ -47,7 +47,7 @@ export const HeroPage = () => {
         <p className="fst-italic">{hero.characters}</p>
 
         <button className="btn btn-dark" onClick={onNavigateBack}>
-          Regresar
+          Go Back
         </button>
       </div>
     </div>
