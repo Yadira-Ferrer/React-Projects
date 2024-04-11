@@ -1,4 +1,4 @@
-import { LogoutOutlined, MenuOutlined } from '@mui/icons-material';
+import { MenuOutlined, PowerSettingsNewRounded } from '@mui/icons-material';
 import { AppBar, Toolbar, IconButton, Grid, Typography } from '@mui/material';
 
 /* eslint-disable react/prop-types */ // TODO: upgrade to latest eslint tooling
@@ -31,7 +31,7 @@ export const NavBar = ({ drawerWidth = 240 }) => {
             JournalApp{' '}
           </Typography>
           <IconButton color="error">
-            <LogoutOutlined />
+            <PowerSettingsNewRounded />
           </IconButton>
         </Grid>
       </Toolbar>
